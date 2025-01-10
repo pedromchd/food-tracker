@@ -1,3 +1,7 @@
 {
-  "recommendations": ["esbenp.prettier-vscode", "ms-vscode.live-server"]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ms-vscode.live-server",
+    "cweijan.vscode-office"
+  ]
 }
