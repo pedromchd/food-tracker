@@ -1,37 +1,52 @@
 $(function () {
   foods.forEach((food) => {
+    const foodKey = food.imagem.replace(".png", "");
     $("#food-panel").append(`
         <div class="food-card">
-          <img
-            src="img/foods/${food.imagem}"
-            alt="${food.alimento}"
-          />
-          <div class="food-info">
-            <span class="food-name">${food.alimento} (100g)</span>
-            <table class="food-nutrients">
-              <tr>
-                <td>Carboidratos:</td>
-                <td>${unidadeNutriente(food.carboidratos)}</td>
-              </tr>
-              <tr>
-                <td>Proteínas:</td>
-                <td>${unidadeNutriente(food.proteinas)}</td>
-              </tr>
-              <tr>
-                <td>Gorduras:</td>
-                <td>${unidadeNutriente(food.gorduras)}</td>
-              </tr>
-            </table>
-            <div class="food-vitamins">
-              <span><b>Vitaminas principais:</b></span>
-              ${vitaminasPrincipais(food.vitaminasPrincipais)}
-            </div>
-            <input
-              type="text"
-              class="food-quantity"
-              placeholder="Coloque a quantidade aqui"
+          <span class="food-name">${food.alimento}</span>
+          <span class="food-portion">Porção: 100g</span>
+          <div class="food-image">
+            <img
+              src="img/foods/${food.imagem}"
+              alt="${food.alimento}"
             />
           </div>
+          <table class="food-info">
+            <tr>
+              <td>Carboidratos:</td>
+              <td class="food-nutrient">
+                ${unidadeNutriente(food.carboidratos)}
+              </td>
+            </tr>
+            <tr>
+              <td>Proteínas:</td>
+              <td class="food-nutrient">
+                ${unidadeNutriente(food.proteinas)}
+              </td>
+            </tr>
+            <tr>
+              <td>Gorduras:</td>
+              <td class="food-nutrient">
+                ${unidadeNutriente(food.gorduras)}
+              </td>
+            </tr>
+            <tr>
+              <td>Vitaminas:</td>
+              <td class="food-vitamins">
+                ${vitaminasPrincipais(food.vitaminasPrincipais)}
+              </td>
+            </tr>
+          </table>
+          <label for="food-quantity-${foodKey}">
+            Quantidade:
+            <input
+              type="text"
+              id="food-quantity-${foodKey}"
+              class="food-quantity"
+              size="8"
+            />
+            g
+          </label>
         </div>
       `);
   });
@@ -48,7 +63,10 @@ function vitaminasPrincipais(vitaminas) {
 }
 
 function unidadeNutriente(valor) {
-  if (valor >= 1000) {
+  if (valor <= 0) {
+    return "0g";
+  }
+  if (valor >= 100) {
     return `${valor / 1000}g`;
   }
   return `${valor}mg`;
