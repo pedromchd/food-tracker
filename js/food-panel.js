@@ -1,6 +1,6 @@
 $(function () {
   foods.forEach((food) => {
-    $("#input-panel").append(`
+    $("#food-panel").append(`
         <div class="food-card">
           <img
             src="img/foods/${food.imagem}"
