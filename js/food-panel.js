@@ -3,7 +3,7 @@ $(function () {
     $("#input-panel").append(`
         <div class="food-card">
           <img
-            src="img/${food.imagem}"
+            src="img/foods/${food.imagem}"
             alt="${food.alimento}"
           />
           <div class="food-info">
@@ -66,7 +66,7 @@ const foods = [
     potassio: "35",
     calcio: "10",
     vitaminasPrincipais: null,
-    imagem: "arroz_branco.jpg",
+    imagem: "arroz_branco.png",
   },
   {
     alimento: "Feijão",
@@ -79,7 +79,7 @@ const foods = [
     potassio: "1500",
     calcio: "50",
     vitaminasPrincipais: ["B9"],
-    imagem: "feijao.jpg",
+    imagem: "feijao.png",
   },
   {
     alimento: "Pão francês",
@@ -92,7 +92,7 @@ const foods = [
     potassio: "120",
     calcio: "20",
     vitaminasPrincipais: null,
-    imagem: "pao_frances.jpg",
+    imagem: "pao_frances.png",
   },
   {
     alimento: "Laranja",
@@ -105,7 +105,7 @@ const foods = [
     potassio: "180",
     calcio: "40",
     vitaminasPrincipais: ["C", "A"],
-    imagem: "laranja.jpg",
+    imagem: "laranja.png",
   },
   {
     alimento: "Carne bovina",
@@ -118,7 +118,7 @@ const foods = [
     potassio: "350",
     calcio: "15",
     vitaminasPrincipais: null,
-    imagem: "carne_bovina.jpg",
+    imagem: "carne_bovina.png",
   },
   {
     alimento: "Carne de frango",
@@ -131,7 +131,7 @@ const foods = [
     potassio: "300",
     calcio: "12",
     vitaminasPrincipais: null,
-    imagem: "carne_de_frango.jpg",
+    imagem: "carne_de_frango.png",
   },
   {
     alimento: "Ovo",
@@ -144,7 +144,7 @@ const foods = [
     potassio: "126",
     calcio: "56",
     vitaminasPrincipais: ["B12", "D"],
-    imagem: "ovo.jpg",
+    imagem: "ovo.png",
   },
   {
     alimento: "Café (sem açúcar)",
@@ -157,7 +157,7 @@ const foods = [
     potassio: "90",
     calcio: "0",
     vitaminasPrincipais: null,
-    imagem: "cafe_sem_acucar.jpg",
+    imagem: "cafe_sem_acucar.png",
   },
   {
     alimento: "Banana",
@@ -170,7 +170,7 @@ const foods = [
     potassio: "360",
     calcio: "5",
     vitaminasPrincipais: ["B6", "C"],
-    imagem: "banana.jpg",
+    imagem: "banana.png",
   },
   {
     alimento: "Batata branca",
@@ -183,6 +183,6 @@ const foods = [
     potassio: "425",
     calcio: "10",
     vitaminasPrincipais: ["C"],
-    imagem: "batata_branca.jpg",
+    imagem: "batata_branca.png",
   },
 ];
