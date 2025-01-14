@@ -1,5 +1,5 @@
-[
-  {
+{
+  "arroz_branco": {
     "alimento": "Arroz branco",
     "carboidratos": "28200",
     "proteinas": "2700",
@@ -9,10 +9,9 @@
     "sodio": "1",
     "potassio": "35",
     "calcio": "10",
-    "vitaminasPrincipais": null,
-    "imagem": "arroz_branco.png"
+    "vitaminasPrincipais": null
   },
-  {
+  "feijao": {
     "alimento": "Feijão",
     "carboidratos": "20000",
     "proteinas": "9000",
@@ -22,10 +21,9 @@
     "sodio": "2",
     "potassio": "1500",
     "calcio": "50",
-    "vitaminasPrincipais": ["B9"],
-    "imagem": "feijao.png"
+    "vitaminasPrincipais": ["B9"]
   },
-  {
+  "pao_frances": {
     "alimento": "Pão francês",
     "carboidratos": "50000",
     "proteinas": "9000",
@@ -35,10 +33,9 @@
     "sodio": "470",
     "potassio": "120",
     "calcio": "20",
-    "vitaminasPrincipais": null,
-    "imagem": "pao_frances.png"
+    "vitaminasPrincipais": null
   },
-  {
+  "laranja": {
     "alimento": "Laranja",
     "carboidratos": "11750",
     "proteinas": "940",
@@ -48,10 +45,9 @@
     "sodio": "1",
     "potassio": "180",
     "calcio": "40",
-    "vitaminasPrincipais": ["C", "A"],
-    "imagem": "laranja.png"
+    "vitaminasPrincipais": ["C", "A"]
   },
-  {
+  "carne_bovina": {
     "alimento": "Carne bovina",
     "carboidratos": "0",
     "proteinas": "26000",
@@ -61,10 +57,9 @@
     "sodio": "65",
     "potassio": "350",
     "calcio": "15",
-    "vitaminasPrincipais": null,
-    "imagem": "carne_bovina.png"
+    "vitaminasPrincipais": null
   },
-  {
+  "carne_de_frango": {
     "alimento": "Carne de frango",
     "carboidratos": "0",
     "proteinas": "31000",
@@ -74,10 +69,9 @@
     "sodio": "70",
     "potassio": "300",
     "calcio": "12",
-    "vitaminasPrincipais": null,
-    "imagem": "carne_de_frango.png"
+    "vitaminasPrincipais": null
   },
-  {
+  "ovo": {
     "alimento": "Ovo",
     "carboidratos": "720",
     "proteinas": "13000",
@@ -87,10 +81,9 @@
     "sodio": "120",
     "potassio": "126",
     "calcio": "56",
-    "vitaminasPrincipais": ["B12", "D"],
-    "imagem": "ovo.png"
+    "vitaminasPrincipais": ["B12", "D"]
   },
-  {
+  "cafe_sem_acucar": {
     "alimento": "Café (sem açúcar)",
     "carboidratos": "0",
     "proteinas": "0",
@@ -100,10 +93,9 @@
     "sodio": "5",
     "potassio": "90",
     "calcio": "0",
-    "vitaminasPrincipais": null,
-    "imagem": "cafe_sem_acucar.png"
+    "vitaminasPrincipais": null
   },
-  {
+  "banana": {
     "alimento": "Banana",
     "carboidratos": "22840",
     "proteinas": "1090",
@@ -113,10 +105,9 @@
     "sodio": "1",
     "potassio": "360",
     "calcio": "5",
-    "vitaminasPrincipais": ["B6", "C"],
-    "imagem": "banana.png"
+    "vitaminasPrincipais": ["B6", "C"]
   },
-  {
+  "batata_branca": {
     "alimento": "Batata branca",
     "carboidratos": "17580",
     "proteinas": "2020",
@@ -126,7 +117,6 @@
     "sodio": "6",
     "potassio": "425",
     "calcio": "10",
-    "vitaminasPrincipais": ["C"],
-    "imagem": "batata_branca.png"
+    "vitaminasPrincipais": ["C"]
   }
-]
+}

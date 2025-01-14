@@ -1,13 +1,12 @@
 $(function () {
-  foods.forEach((food) => {
-    const foodKey = food.imagem.replace(".png", "");
+  for (const [foodKey, food] of Object.entries(foods)) {
     $("#food-panel").append(`
         <div class="food-card">
           <span class="food-name">${food.alimento}</span>
           <span class="food-portion">Porção: 100g</span>
           <div class="food-image">
             <img
-              src="img/foods/${food.imagem}"
+              src="img/foods/${foodKey}.png"
               alt="${food.alimento}"
             />
           </div>
@@ -42,14 +41,16 @@ $(function () {
             <input
               type="text"
               id="food-quantity-${foodKey}"
+              data-food="${foodKey}"
               class="food-quantity"
+              pattern="[0-9]*"
               size="8"
             />
             g
           </label>
         </div>
       `);
-  });
+  }
 });
 
 function vitaminasPrincipais(vitaminas) {
@@ -72,8 +73,8 @@ function unidadeNutriente(valor) {
   return `${valor}mg`;
 }
 
-const foods = [
-  {
+const foods = {
+  arroz_branco: {
     alimento: "Arroz branco",
     carboidratos: "28200",
     proteinas: "2700",
@@ -84,9 +85,8 @@ const foods = [
     potassio: "35",
     calcio: "10",
     vitaminasPrincipais: null,
-    imagem: "arroz_branco.png",
   },
-  {
+  feijao: {
     alimento: "Feijão",
     carboidratos: "20000",
     proteinas: "9000",
@@ -97,9 +97,8 @@ const foods = [
     potassio: "1500",
     calcio: "50",
     vitaminasPrincipais: ["B9"],
-    imagem: "feijao.png",
   },
-  {
+  pao_frances: {
     alimento: "Pão francês",
     carboidratos: "50000",
     proteinas: "9000",
@@ -110,9 +109,8 @@ const foods = [
     potassio: "120",
     calcio: "20",
     vitaminasPrincipais: null,
-    imagem: "pao_frances.png",
   },
-  {
+  laranja: {
     alimento: "Laranja",
     carboidratos: "11750",
     proteinas: "940",
@@ -123,9 +121,8 @@ const foods = [
     potassio: "180",
     calcio: "40",
     vitaminasPrincipais: ["C", "A"],
-    imagem: "laranja.png",
   },
-  {
+  carne_bovina: {
     alimento: "Carne bovina",
     carboidratos: "0",
     proteinas: "26000",
@@ -136,9 +133,8 @@ const foods = [
     potassio: "350",
     calcio: "15",
     vitaminasPrincipais: null,
-    imagem: "carne_bovina.png",
   },
-  {
+  carne_de_frango: {
     alimento: "Carne de frango",
     carboidratos: "0",
     proteinas: "31000",
@@ -149,9 +145,8 @@ const foods = [
     potassio: "300",
     calcio: "12",
     vitaminasPrincipais: null,
-    imagem: "carne_de_frango.png",
   },
-  {
+  ovo: {
     alimento: "Ovo",
     carboidratos: "720",
     proteinas: "13000",
@@ -162,9 +157,8 @@ const foods = [
     potassio: "126",
     calcio: "56",
     vitaminasPrincipais: ["B12", "D"],
-    imagem: "ovo.png",
   },
-  {
+  cafe_sem_acucar: {
     alimento: "Café (sem açúcar)",
     carboidratos: "0",
     proteinas: "0",
@@ -175,9 +169,8 @@ const foods = [
     potassio: "90",
     calcio: "0",
     vitaminasPrincipais: null,
-    imagem: "cafe_sem_acucar.png",
   },
-  {
+  banana: {
     alimento: "Banana",
     carboidratos: "22840",
     proteinas: "1090",
@@ -188,9 +181,8 @@ const foods = [
     potassio: "360",
     calcio: "5",
     vitaminasPrincipais: ["B6", "C"],
-    imagem: "banana.png",
   },
-  {
+  batata_branca: {
     alimento: "Batata branca",
     carboidratos: "17580",
     proteinas: "2020",
@@ -201,6 +193,5 @@ const foods = [
     potassio: "425",
     calcio: "10",
     vitaminasPrincipais: ["C"],
-    imagem: "batata_branca.png",
   },
-];
+};
