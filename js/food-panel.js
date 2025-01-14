@@ -1,11 +1,58 @@
-// Nova política CORS não permite carregamento de arquivo local client-side
-// $(function () {
-//   $("main").text("Food Panel");
-//   $.get("/data/foods.csv", (data) => {
-//     foods = $.csv.toObjects(data);
-//     console.table(foods);
-//   });
-// });
+$(function () {
+  foods.forEach((food) => {
+    $("#input-panel").append(`
+        <div class="food-card">
+          <img
+            src="img/${food.imagem}"
+            alt="${food.alimento}"
+          />
+          <div class="food-info">
+            <span class="food-name">${food.alimento} (100g)</span>
+            <table class="food-nutrients">
+              <tr>
+                <td>Carboidratos:</td>
+                <td>${unidadeNutriente(food.carboidratos)}</td>
+              </tr>
+              <tr>
+                <td>Proteínas:</td>
+                <td>${unidadeNutriente(food.proteinas)}</td>
+              </tr>
+              <tr>
+                <td>Gorduras:</td>
+                <td>${unidadeNutriente(food.gorduras)}</td>
+              </tr>
+            </table>
+            <div class="food-vitamins">
+              <span><b>Vitaminas principais:</b></span>
+              ${vitaminasPrincipais(food.vitaminasPrincipais)}
+            </div>
+            <input
+              type="text"
+              class="food-quantity"
+              placeholder="Coloque a quantidade aqui"
+            />
+          </div>
+        </div>
+      `);
+  });
+});
+
+function vitaminasPrincipais(vitaminas) {
+  if (!vitaminas) {
+    return "Nenhuma"; // se não houver vitaminas principais, retornar "Nenhuma"
+  }
+  let vitaminasPrincipais = vitaminas.map((vitamina) => {
+    return `<span class="food-vitamin">${vitamina}</span>`; // criar um span para cada vitamina
+  });
+  return vitaminasPrincipais.join(""); // juntar todos os spans em uma string
+}
+
+function unidadeNutriente(valor) {
+  if (valor >= 1000) {
+    return `${valor / 1000}g`;
+  }
+  return `${valor}mg`;
+}
 
 const foods = [
   {
