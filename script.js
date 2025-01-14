@@ -12,9 +12,18 @@ let graficoDia = null;
 
 // Atualiza o gráfico de barras
 function atualizarGraficoNutrientes() {
-  const totalProteinas = refeicoesDia.reduce((acc, cur) => acc + cur.proteinas, 0);
-  const totalCarboidratos = refeicoesDia.reduce((acc, cur) => acc + cur.carboidratos, 0);
-  const totalGorduras = refeicoesDia.reduce((acc, cur) => acc + cur.gorduras, 0);
+  const totalProteinas = refeicoesDia.reduce(
+    (acc, cur) => acc + cur.proteinas,
+    0
+  );
+  const totalCarboidratos = refeicoesDia.reduce(
+    (acc, cur) => acc + cur.carboidratos,
+    0
+  );
+  const totalGorduras = refeicoesDia.reduce(
+    (acc, cur) => acc + cur.gorduras,
+    0
+  );
 
   const dados = [totalProteinas, totalCarboidratos, totalGorduras];
 
@@ -24,51 +33,53 @@ function atualizarGraficoNutrientes() {
     graficoNutrientes.update();
   } else {
     // Cria o gráfico se ainda não existir
-    const ctx = document.getElementById('grafico-nutrientes').getContext('2d');
+    const ctx = document.getElementById("grafico-nutrientes").getContext("2d");
     graficoNutrientes = new Chart(ctx, {
-      type: 'bar',
+      type: "bar",
       data: {
-        labels: ['Proteínas', 'Carboidratos', 'Gorduras'],
-        datasets: [{
-          label: 'Gramas Consumidas',
-          data: dados,
-          backgroundColor: [
-            'rgba(75, 192, 192, 0.8)',
-            'rgba(255, 159, 64, 0.8)',
-            'rgba(153, 102, 255, 0.8)',
-          ],
-          borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(255, 159, 64, 1)',
-            'rgba(153, 102, 255, 1)',
-          ],
-          borderWidth: 1
-        }]
+        labels: ["Proteínas", "Carboidratos", "Gorduras"],
+        datasets: [
+          {
+            label: "Gramas Consumidas",
+            data: dados,
+            backgroundColor: [
+              "rgba(75, 192, 192, 0.8)",
+              "rgba(255, 159, 64, 0.8)",
+              "rgba(153, 102, 255, 0.8)",
+            ],
+            borderColor: [
+              "rgba(75, 192, 192, 1)",
+              "rgba(255, 159, 64, 1)",
+              "rgba(153, 102, 255, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
       },
       options: {
         responsive: true,
         plugins: {
-          legend: { position: 'top', labels: { color: '#333' } },
+          legend: { position: "top", labels: { color: "#fff" } },
           tooltip: {
-            backgroundColor: 'rgba(255, 255, 255, 0.9)',
-            titleColor: '#333',
-            bodyColor: '#333',
+            backgroundColor: "rgba(237, 237, 237, 0.9)",
+            titleColor: "#333",
+            bodyColor: "#333",
             borderWidth: 1,
-            borderColor: '#ccc',
-          }
+            borderColor: "#ccc",
+          },
         },
         scales: {
-          x: { grid: { display: false }, ticks: { color: '#333' } },
+          x: { grid: { display: false }, ticks: { color: "#fff" } },
           y: {
             beginAtZero: true,
-            grid: { color: 'rgba(0, 0, 0, 0.1)' },
-            ticks: { color: '#333' }
-          }
+            grid: { color: "rgba(0, 0, 0, 0.1)" },
+            ticks: { color: "#fff" },
+          },
         },
         layout: {
-          padding: { top: 20, bottom: 20, left: 20, right: 20 }
-        }
-      }
+          padding: { top: 20, bottom: 20, left: 20, right: 20 },
+        },
+      },
     });
   }
 }
@@ -128,13 +139,18 @@ function atualizarGraficoDia() {
 function adicionarRefeicao(event) {
   event.preventDefault(); // Não recarrega o formulário
 
-  const nomeRefeicao = document.getElementById('nome-refeicao').value;
-  const proteinas = parseFloat(document.getElementById('prot-ref').value);
-  const carboidratos = parseFloat(document.getElementById('carb-ref').value);
-  const gorduras = parseFloat(document.getElementById('gord-ref').value);
+  const nomeRefeicao = document.getElementById("nome-refeicao").value;
+  const proteinas = parseFloat(document.getElementById("prot-ref").value);
+  const carboidratos = parseFloat(document.getElementById("carb-ref").value);
+  const gorduras = parseFloat(document.getElementById("gord-ref").value);
 
-  if (!nomeRefeicao || isNaN(proteinas) || isNaN(carboidratos) || isNaN(gorduras)) {
-    alert("Por favor, preencha todos os campos corretamente!");
+  if (
+    !nomeRefeicao ||
+    isNaN(proteinas) ||
+    isNaN(carboidratos) ||
+    isNaN(gorduras)
+  ) {
+    alert("Por favor, preencha todos #10 os campos corretamente!");
     return;
   }
 
@@ -144,7 +160,7 @@ function adicionarRefeicao(event) {
   refeicoesDia.push(refeicao);
 
   // Salva as refeições no localStorage
-  localStorage.setItem('refeicoesDia', JSON.stringify(refeicoesDia));
+  localStorage.setItem("refeicoesDia", JSON.stringify(refeicoesDia));
 
   // Atualiza tabela de refeição
   const tabelaRef = document.querySelector("tbody");
@@ -162,18 +178,18 @@ function adicionarRefeicao(event) {
   atualizarGraficoDia();
 
   // Reseta os forms
-  document.getElementById('refeicao-form').reset();
+  document.getElementById("refeicao-form").reset();
 }
 
 // Recupera as refeições salvas ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
-  const refeicoesSalvas = localStorage.getItem('refeicoesDia');
+  const refeicoesSalvas = localStorage.getItem("refeicoesDia");
   if (refeicoesSalvas) {
     refeicoesDia = JSON.parse(refeicoesSalvas);
 
     // Atualiza a tabela com os dados salvos
     const tabelaRef = document.querySelector("tbody");
-    refeicoesDia.forEach(refeicao => {
+    refeicoesDia.forEach((refeicao) => {
       const novaLinha = document.createElement("tr");
       novaLinha.innerHTML = `
         <td>${refeicao.nome}</td>
@@ -190,4 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Adiciona evento para o formulário
-document.getElementById('refeicao-form').addEventListener('submit', adicionarRefeicao);
+document
+  .getElementById("refeicao-form")
+  .addEventListener("submit", adicionarRefeicao);
