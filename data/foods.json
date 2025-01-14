@@ -9,7 +9,8 @@
     "sodio": "1",
     "potassio": "35",
     "calcio": "10",
-    "vitaminasPrincipais": null
+    "vitaminasPrincipais": null,
+    "imagem": "arroz_branco.jpg"
   },
   {
     "alimento": "Feijão",
@@ -21,7 +22,8 @@
     "sodio": "2",
     "potassio": "1500",
     "calcio": "50",
-    "vitaminasPrincipais": ["B9"]
+    "vitaminasPrincipais": ["B9"],
+    "imagem": "feijao.jpg"
   },
   {
     "alimento": "Pão francês",
@@ -33,7 +35,8 @@
     "sodio": "470",
     "potassio": "120",
     "calcio": "20",
-    "vitaminasPrincipais": null
+    "vitaminasPrincipais": null,
+    "imagem": "pao_frances.jpg"
   },
   {
     "alimento": "Laranja",
@@ -45,7 +48,8 @@
     "sodio": "1",
     "potassio": "180",
     "calcio": "40",
-    "vitaminasPrincipais": ["C", "A"]
+    "vitaminasPrincipais": ["C", "A"],
+    "imagem": "laranja.jpg"
   },
   {
     "alimento": "Carne bovina",
@@ -57,7 +61,8 @@
     "sodio": "65",
     "potassio": "350",
     "calcio": "15",
-    "vitaminasPrincipais": null
+    "vitaminasPrincipais": null,
+    "imagem": "carne_bovina.jpg"
   },
   {
     "alimento": "Carne de frango",
@@ -69,7 +74,8 @@
     "sodio": "70",
     "potassio": "300",
     "calcio": "12",
-    "vitaminasPrincipais": null
+    "vitaminasPrincipais": null,
+    "imagem": "carne_de_frango.jpg"
   },
   {
     "alimento": "Ovo",
@@ -81,7 +87,8 @@
     "sodio": "120",
     "potassio": "126",
     "calcio": "56",
-    "vitaminasPrincipais": ["B12", "D"]
+    "vitaminasPrincipais": ["B12", "D"],
+    "imagem": "ovo.jpg"
   },
   {
     "alimento": "Café (sem açúcar)",
@@ -93,7 +100,8 @@
     "sodio": "5",
     "potassio": "90",
     "calcio": "0",
-    "vitaminasPrincipais": null
+    "vitaminasPrincipais": null,
+    "imagem": "cafe_sem_acucar.jpg"
   },
   {
     "alimento": "Banana",
@@ -105,7 +113,8 @@
     "sodio": "1",
     "potassio": "360",
     "calcio": "5",
-    "vitaminasPrincipais": ["B6", "C"]
+    "vitaminasPrincipais": ["B6", "C"],
+    "imagem": "banana.jpg"
   },
   {
     "alimento": "Batata branca",
@@ -117,6 +126,7 @@
     "sodio": "6",
     "potassio": "425",
     "calcio": "10",
-    "vitaminasPrincipais": ["C"]
+    "vitaminasPrincipais": ["C"],
+    "imagem": "batata_branca.jpg"
   }
 ]
