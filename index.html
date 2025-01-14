@@ -6,13 +6,133 @@
     <script src="lib/jquery.min.js"></script>
     <script src="lib/jquery.csv.min.js"></script>
     <script src="js/food-panel.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <title>Food Tracker</title>
+    <style>
+      .grafico-container {
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+      }
+      .center-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+      }
+      option {
+        background-color: #fff;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Food Tracker</h1>
+     
     </header>
-    <main></main>
+   <main>
+    <h1>Food Tracker</h1><section id="graficos">
+        <h2>Meta Diária em %</h2>
+        <div class="grafico-container"><canvas id="grafico-meta-diaria"></canvas></div>
+          
+        </div>
+  
+        <h2>Calorias Ingeridas por Alimento</h2>
+        <div class="grafico-container">
+          <canvas id="grafico-calorias-ingeridas"></canvas>
+        </div>
+  
+        <h2>Café da Manhã</h2>
+        <div class="grafico-container">
+          <canvas id="grafico-cafe-da-manha"></canvas>
+        </div>
+  
+        <h2>Almoço</h2>
+        <div class="grafico-container">
+          <canvas id="grafico-almoco"></canvas>
+        </div>
+  
+        <h2>Jantar</h2>
+        <div class="grafico-container">
+          <canvas id="grafico-jantar"></canvas>
+        </div>
+  
+        <h2>Lanche</h2>
+        <div class="grafico-container">
+          <canvas id="grafico-lanche"></canvas>
+        </div>
+  
+        <div class="center-button">
+          <button id="fechar-graficos">Fechar Gráficos</button>
+        </div>
+      </section>
+      <br>
+      <div class="center-button">
+        <button id="visualizar-graficos">Visualizar Gráficos</button>
+      </div>
+  
+      <section id="adicionar-refeicoes">
+        <h2>Adicionar Refeições do Dia</h2>
+        <form id="refeicao-form" class="form-meta">
+          <div class="form-group">
+            <label for="nome-refeicao">Refeição:</label>
+            <select id="nome-refeicao" required>
+              <option value="" disabled selected>Selecione uma refeição</option>
+              <option value="cafe-da-manha">Café da Manhã</option>
+              <option value="almoco">Almoço</option>
+              <option value="jantar">Jantar</option>
+              <option value="lanche">Lanche</option>
+            </select>
+          </div>
+          <br> 
+          <button type="submit">Adicionar Refeição</button>
+        </form>
+      </section>
+  
+      <section id="tabela-refeicoes"></section>
+        <h2>Refeições do Dia</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Refeição</th>
+              <th>Proteínas (g)</th>
+              <th>Carboidratos (g)</th>
+              <th>Gorduras (g)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Café da Manhã</td>
+              <td>30</td>
+              <td>50</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Almoço</td>
+              <td>40</td>
+              <td>60</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Jantar</td>
+              <td>25</td>
+              <td>30</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+   </main>
     <footer>
       <p>
         Copyright &copy; 2025 Food Tracker by Alex Santos (169622) & Pedro
