@@ -27,27 +27,36 @@
   overflow: hidden;
 }
 
-img {
+.food-image img {
   width: 100%;
   object-fit: contain;
   object-position: center;
 }
 
 .food-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .food-portion {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
 }
 
 .food-info {
-  width: 80%;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.food-nutrient {
+  text-align: right;
+  font-weight: bold;
 }
 
 .food-vitamins {
+  font-weight: bold;
   display: flex;
+  justify-content: end;
   gap: 0.25rem;
 }
 
