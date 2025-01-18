@@ -1,4 +1,4 @@
-export const foods = {
+FOODS = {
   arroz_branco: {
     alimento: "Arroz branco",
     carboidratos: "28200",
