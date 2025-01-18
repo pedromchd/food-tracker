@@ -36,18 +36,19 @@ $(function () {
               </td>
             </tr>
           </table>
-          <label for="food-quantity-${foodKey}">
-            Quantidade:
+          <div class="food-quantity">
+            <label for="food-quantity-${foodKey}">
+              Quantidade:
+            </label>
             <input
               type="text"
+              placeholder="0"
               id="food-quantity-${foodKey}"
               data-food="${foodKey}"
-              class="food-quantity"
               pattern="[0-9]*"
-              size="8"
             />
-            g
-          </label>
+            <span>g</span>
+          </div>
         </div>
       `);
   }
