@@ -55,12 +55,12 @@ $(function () {
 
 function vitaminasPrincipais(vitaminas) {
   if (!vitaminas) {
-    return "Nenhuma"; // se não houver vitaminas principais, retornar "Nenhuma"
+    return "Nenhuma";
   }
   let vitaminasPrincipais = vitaminas.map((vitamina) => {
-    return `<span class="food-vitamin">${vitamina}</span>`; // criar um span para cada vitamina
+    return `<span class="food-vitamin">${vitamina}</span>`;
   });
-  return vitaminasPrincipais.join(""); // juntar todos os spans em uma string
+  return vitaminasPrincipais.join("");
 }
 
 function unidadeNutriente(valor) {
