@@ -1,10 +1,3 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 1rem;
-}
-
 #food-panel {
   display: flex;
   flex-wrap: wrap;
@@ -19,11 +12,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid black;
-  padding-block: 0.75rem;
+  padding: 0.75rem 1.25rem;
   background-color: rgb(243, 243, 133);
   border: 2px solid rgb(236, 236, 18);
   border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 .food-image {
@@ -34,27 +27,36 @@ body {
   overflow: hidden;
 }
 
-img {
+.food-image img {
   width: 100%;
   object-fit: contain;
   object-position: center;
 }
 
 .food-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .food-portion {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
 }
 
 .food-info {
-  width: 80%;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.food-nutrient {
+  text-align: right;
+  font-weight: bold;
 }
 
 .food-vitamins {
+  font-weight: bold;
   display: flex;
+  justify-content: end;
   gap: 0.25rem;
 }
 
@@ -63,4 +65,32 @@ img {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   background-color: rgb(236, 236, 18);
+}
+
+.food-quantity {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.food-quantity input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(236, 236, 18);
+}
+
+.food-quantity label,
+.food-quantity span {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(236, 236, 18);
+  background-color: rgb(236, 236, 18);
+}
+
+.food-quantity label {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.food-quantity span {
+  border-radius: 0 0.25rem 0.25rem 0;
 }

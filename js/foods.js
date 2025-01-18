@@ -1,4 +1,4 @@
-export const foods = {
+FOODS = {
   arroz_branco: {
     alimento: "Arroz branco",
     carboidratos: "28200",
@@ -84,7 +84,7 @@ export const foods = {
     vitaminasPrincipais: ["B12", "D"],
   },
   cafe_sem_acucar: {
-    alimento: "Café (sem açúcar)",
+    alimento: "Café sem açúcar",
     carboidratos: "0",
     proteinas: "0",
     gorduras: "0",
