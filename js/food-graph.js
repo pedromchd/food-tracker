@@ -66,7 +66,7 @@ $(function () {
 function getFoodData(foodKey, quantity) {
   const food = window.foods[foodKey];
 
-  foodData = {
+  const foodData = {
     alimento: food.alimento,
     quantidade: quantity,
     carboidratos: calcNutrientGrams(food.carboidratos, quantity),
@@ -74,7 +74,10 @@ function getFoodData(foodKey, quantity) {
     gorduras: calcNutrientGrams(food.gorduras, quantity),
   };
 
-  valorEnergetico = calcEnergyValue(foodData);
+  const porcentagens = calcNutrientsPercentages(foodData);
+  foodData.porcentagens = porcentagens;
+
+  const valorEnergetico = calcEnergyValue(foodData);
   foodData.valorEnergetico = valorEnergetico;
 
   return foodData;
@@ -83,6 +86,19 @@ function getFoodData(foodKey, quantity) {
 function calcNutrientGrams(nutrientMgPer100g, foodQuantityGrams) {
   const nutrientGrams = (nutrientMgPer100g / 1000) * (foodQuantityGrams / 100);
   return parseFloat(nutrientGrams.toFixed(2));
+}
+
+function calcNutrientsPercentages({ carboidratos, proteinas, gorduras }) {
+  const totalNutrients = carboidratos + proteinas + gorduras;
+  const carboidratosPercentage = (carboidratos / totalNutrients) * 100;
+  const proteinasPercentage = (proteinas / totalNutrients) * 100;
+  const gordurasPercentage = (gorduras / totalNutrients) * 100;
+
+  return {
+    carboidratos: parseFloat(carboidratosPercentage.toFixed(2)),
+    proteinas: parseFloat(proteinasPercentage.toFixed(2)),
+    gorduras: parseFloat(gordurasPercentage.toFixed(2)),
+  };
 }
 
 function calcEnergyValue({ carboidratos, proteinas, gorduras }) {
