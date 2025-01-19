@@ -1,6 +1,7 @@
 $(function () {
   $("#create-food-graph").on("click", () => {
     window.userMeal = {};
+
     $(".food-quantity input").each((index, food) => {
       const foodKey = $(food).data("food");
       const quantity = parseFloat($(food).val());
@@ -9,14 +10,17 @@ $(function () {
       }
       $(food).val("");
     });
+
     if (Object.keys(window.userMeal).length === 0) {
       alert("Selecione pelo menos um alimento");
       $("#food-graph").empty();
       return;
     }
+
     $("#food-graph")
       .empty()
       .append('<div><canvas id="valor-energetico"></canvas></div>');
+
     new Chart($("#valor-energetico"), {
       type: "bar",
       data: {
@@ -60,6 +64,7 @@ $(function () {
 
 function getFoodData(foodKey, quantity) {
   const food = window.foods[foodKey];
+
   foodData = {
     alimento: food.alimento,
     quantidade: quantity,
@@ -67,13 +72,15 @@ function getFoodData(foodKey, quantity) {
     proteinas: calcNutrientGrams(food.proteinas, quantity),
     gorduras: calcNutrientGrams(food.gorduras, quantity),
   };
+
   valorEnergetico = calcEnergyValue(foodData);
   foodData.valorEnergetico = valorEnergetico;
+
   return foodData;
 }
 
 function calcNutrientGrams(nutrientMgPer100g, foodQuantityGrams) {
-  nutrientGrams = (nutrientMgPer100g / 1000) * (foodQuantityGrams / 100);
+  const nutrientGrams = (nutrientMgPer100g / 1000) * (foodQuantityGrams / 100);
   return parseFloat(nutrientGrams.toFixed(2));
 }
 
