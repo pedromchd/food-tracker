@@ -42,7 +42,6 @@ $(function () {
             </label>
             <input
               type="text"
-              placeholder="0"
               id="food-quantity-${foodKey}"
               data-food="${foodKey}"
               pattern="[0-9]*"
