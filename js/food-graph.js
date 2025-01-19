@@ -12,7 +12,7 @@ $(function () {
       alert("Selecione pelo menos um alimento");
       return;
     }
-    $("#food-graph").show();
+    $("#food-graph").css("display", "flex");
     new Chart($("#valor-energetico"), {
       type: "bar",
       data: {

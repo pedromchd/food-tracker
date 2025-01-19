@@ -21,4 +21,11 @@
 
 #food-graph {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+div:has(#valor-energetico) {
+  width: 75%;
 }
