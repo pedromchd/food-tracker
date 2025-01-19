@@ -11,7 +11,7 @@ body {
 
 header {
   height: 5rem;
-  background-image: url("/img/foods.jpg");
+  /* background-image: url("/img/foods.jpg"); */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -21,13 +21,16 @@ header {
 
 header h1 {
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  text-shadow: 2px 2px 4px #000000bf;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 main {
-  padding: 1rem 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 footer {
