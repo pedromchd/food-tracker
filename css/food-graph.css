@@ -30,8 +30,20 @@
   gap: 1rem;
 }
 
-div:has(#valor-energetico) {
+#nutrient-graphs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+div:has(> canvas) {
+  position: relative;
+}
+
+div:has(> #valor-energetico) {
   width: 75%;
   height: 25rem;
-  position: relative;
 }

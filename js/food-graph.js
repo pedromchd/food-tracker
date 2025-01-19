@@ -60,6 +60,51 @@ $(function () {
         },
       },
     });
+
+    $("#food-graph").append('<div id="nutrient-graphs"></div>');
+
+    for (const [foodKey, foodData] of Object.entries(window.userMeal)) {
+      $("#nutrient-graphs").append(
+        `<div><canvas id="${foodKey}"></canvas></div>`
+      );
+
+      new Chart($(`#${foodKey}`), {
+        type: "doughnut",
+        data: {
+          labels: ["Carboidratos", "Proteínas", "Gorduras"],
+          datasets: [
+            {
+              label: "Porcentagem de Nutrientes",
+              data: [
+                foodData.porcentagens.carboidratos,
+                foodData.porcentagens.proteinas,
+                foodData.porcentagens.gorduras,
+              ],
+              borderWidth: 1,
+              borderColor: "#ecec12",
+              backgroundColor: ["#ff924c", "#80b918", "#ff5c8a"],
+            },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: true,
+              text: foodData.alimento,
+              color: "#fff",
+              font: { size: 16 },
+            },
+            legend: {
+              labels: {
+                color: "#fff",
+                font: { size: 16 },
+              },
+            },
+          },
+        },
+      });
+    }
   });
 });
 
