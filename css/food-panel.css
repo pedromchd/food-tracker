@@ -10,10 +10,10 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background-color: rgb(243, 243, 133);
-  border: 2px solid rgb(236, 236, 18);
+  background-color: #f3f385;
+  border: 2px solid #ecec12;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 4px #000000bf;
 }
 
 .food-image {
@@ -61,7 +61,7 @@
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: rgb(236, 236, 18);
+  background-color: #ecec12;
 }
 
 .food-quantity {
@@ -74,15 +74,15 @@
 .food-quantity input {
   width: 100%;
   padding: 0.25rem 0.5rem;
-  border: 1px solid rgb(236, 236, 18);
+  border: 1px solid #ecec12;
   background-color: #fff;
 }
 
 .food-quantity label,
 .food-quantity span {
   padding: 0.25rem 0.5rem;
-  border: 1px solid rgb(236, 236, 18);
-  background-color: rgb(236, 236, 18);
+  border: 1px solid #ecec12;
+  background-color: #ecec12;
 }
 
 .food-quantity label {
