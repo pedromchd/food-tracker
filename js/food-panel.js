@@ -41,11 +41,9 @@ $(function () {
               Quantidade:
             </label>
             <input
-              type="text"
-              placeholder="0"
+              type="number"
               id="food-quantity-${foodKey}"
               data-food="${foodKey}"
-              pattern="[0-9]*"
             />
             <span>g</span>
           </div>

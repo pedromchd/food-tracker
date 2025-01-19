@@ -1,13 +1,10 @@
 #food-panel {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 1rem;
 }
 
 .food-card {
-  width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +13,7 @@
   background-color: rgb(243, 243, 133);
   border: 2px solid rgb(236, 236, 18);
   border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
 .food-image {
@@ -78,6 +75,7 @@
   width: 100%;
   padding: 0.25rem 0.5rem;
   border: 1px solid rgb(236, 236, 18);
+  background-color: #fff;
 }
 
 .food-quantity label,
