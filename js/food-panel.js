@@ -1,5 +1,5 @@
 $(function () {
-  for (const [foodKey, food] of Object.entries(FOODS)) {
+  for (const [foodKey, food] of Object.entries(window.foods)) {
     $("#food-panel").append(`
         <div class="food-card">
           <span class="food-name">${food.alimento}</span>
