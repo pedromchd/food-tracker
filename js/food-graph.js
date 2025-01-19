@@ -7,12 +7,16 @@ $(function () {
       if (quantity > 0) {
         window.userMeal[foodKey] = getFoodData(foodKey, quantity);
       }
+      $(food).val("");
     });
     if (Object.keys(window.userMeal).length === 0) {
       alert("Selecione pelo menos um alimento");
+      $("#food-graph").empty();
       return;
     }
-    $("#food-graph").css("display", "flex");
+    $("#food-graph")
+      .empty()
+      .append('<div><canvas id="valor-energetico"></canvas></div>');
     new Chart($("#valor-energetico"), {
       type: "bar",
       data: {
