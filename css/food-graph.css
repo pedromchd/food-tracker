@@ -18,3 +18,7 @@
 #create-food-graph:active {
   box-shadow: 1px 1px 2px #000000bf;
 }
+
+#food-graph {
+  display: none;
+}
