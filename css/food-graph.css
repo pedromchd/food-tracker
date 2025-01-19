@@ -32,4 +32,6 @@
 
 div:has(#valor-energetico) {
   width: 75%;
+  height: 25rem;
+  position: relative;
 }

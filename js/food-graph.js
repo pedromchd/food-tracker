@@ -38,6 +38,7 @@ $(function () {
         ],
       },
       options: {
+        maintainAspectRatio: false,
         scales: {
           x: {
             ticks: { color: "#fff" },
