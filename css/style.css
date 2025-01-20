@@ -38,3 +38,23 @@ footer {
   text-align: center;
   padding: 0.5rem;
 }
+
+button {
+  width: 15rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #000000bf;
+  background-color: #ecec12;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+button:hover {
+  background-color: #f3f385;
+}
+
+button:active {
+  box-shadow: 1px 1px 2px #000000bf;
+}

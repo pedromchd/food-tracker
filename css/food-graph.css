@@ -1,22 +1,5 @@
 #create-food-graph {
-  width: 15rem;
   margin: auto;
-  padding: 0.5rem;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px #000000bf;
-  background-color: #ecec12;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-  color: #333;
-}
-
-#create-food-graph:hover {
-  background-color: #f3f385;
-}
-
-#create-food-graph:active {
-  box-shadow: 1px 1px 2px #000000bf;
 }
 
 #food-graph:empty {
