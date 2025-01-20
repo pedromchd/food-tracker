@@ -1,0 +1,97 @@
+#food-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #f3f385;
+  border: 2px solid #ecec12;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px #000000bf;
+}
+
+.food-image {
+  width: 75%;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.food-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.food-portion {
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+.food-info {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.food-nutrient {
+  text-align: right;
+  font-weight: bold;
+}
+
+.food-vitamins {
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  gap: 0.25rem;
+}
+
+.food-vitamin {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #ecec12;
+}
+
+.food-quantity {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.food-quantity input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ecec12;
+  background-color: #fff;
+}
+
+.food-quantity label,
+.food-quantity span {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ecec12;
+  background-color: #ecec12;
+}
+
+.food-quantity label {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.food-quantity span {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
