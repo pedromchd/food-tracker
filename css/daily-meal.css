@@ -1,3 +1,7 @@
+#food-graph:empty + #daily-meal {
+  display: none;
+}
+
 #daily-meal {
   min-height: 15rem;
   display: grid;
@@ -27,4 +31,32 @@ label:has(+ #meal-name) {
 
 #meal-name::placeholder {
   color: #999;
+}
+
+#daily-meals {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #ecec12;
+}
+
+#daily-meals th {
+  padding: 0.5rem;
+  color: #333;
+  background-color: #ecec12;
+  font-weight: bold;
+}
+
+#daily-meals td {
+  padding: 0.5rem;
+  border: 1px solid #ecec12;
+}
+
+#daily-meals tr {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+#daily-meals tr:nth-of-type(odd) {
+  background-color: #f3f385;
 }
