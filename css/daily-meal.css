@@ -1,0 +1,30 @@
+#daily-meal {
+  min-height: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 1rem;
+}
+
+#add-meal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label:has(+ #meal-name) {
+  color: #fff;
+  font-weight: bold;
+}
+
+#meal-name {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ecec12;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+#meal-name::placeholder {
+  color: #999;
+}
