@@ -36,19 +36,20 @@ label:has(+ #meal-name) {
 #daily-meals {
   width: 100%;
   table-layout: fixed;
-  border: 1px solid #ecec12;
+  border: 1px solid #333;
 }
 
 #daily-meals th {
   padding: 0.5rem;
   color: #333;
   background-color: #ecec12;
+  border: 1px solid #333;
   font-weight: bold;
 }
 
 #daily-meals td {
   padding: 0.5rem;
-  border: 1px solid #ecec12;
+  border: 1px solid #333;
 }
 
 #daily-meals tr {
