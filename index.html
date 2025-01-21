@@ -8,12 +8,14 @@
     <script src="js/foods.js"></script>
     <script src="js/food-panel.js"></script>
     <script src="js/food-graph.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/daily-meal.js"></script>
+    <script src="js/daily-goal.js"></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/food-panel.css" />
     <link rel="stylesheet" href="css/food-graph.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/daily-meal.css" />
+    <link rel="stylesheet" href="css/daily-goal.css" />
     <title>Food Tracker</title>
   </head>
   <body>
@@ -24,82 +26,43 @@
       <section id="food-panel"></section>
       <button id="create-food-graph">Visualização</button>
       <section id="food-graph"></section>
-      <div class="container">
-        <section>
-          <h2>Definir Meta Diária</h2>
-          <form id="meta-form">
-            <label for="meta-prot">Proteínas (g):</label>
-            <input type="number" id="meta-prot" placeholder="Ex: 200" required />
-            <label for="meta-carb">Carboidratos (g):</label>
-            <input type="number" id="meta-carb" placeholder="Ex: 300" required />
-            <label for="meta-gord">Gorduras (g):</label>
-            <input type="number" id="meta-gord" placeholder="Ex: 70" required />
-            <br />
-            <br />
-            <button type="submit">Salvar Meta</button>
-          </form>
-        </section>
-        <section>
-          <h2>Adicionar Refeição</h2>
-          <form id="meta-form">
-            <label for="nome-refeicao">Nome da Refeição:</label>
-            <input
-              type="text"
-              id="nome-refeicao"
-              placeholder="Ex: Café da manhã"
-              required
-            />
-            <label for="prot-ref">Proteínas (g):</label>
-            <input type="number" id="prot-ref" placeholder="Ex: 30" required />
-            <label for="carb-ref">Carboidratos (g):</label>
-            <input type="number" id="carb-ref" placeholder="Ex: 50" required />
-            <label for="gord-ref">Gorduras (g):</label>
-            <input type="number" id="gord-ref" placeholder="Ex: 10" required />
-            <button type="submit">Adicionar Refeição</button>
-          </form>
-        </section>
-        <section>
-          <h2>Gráficos de Consumo</h2>
-          <div id="graficos-container">
-            <canvas id="grafico-nutrientes"></canvas>
-            <br />
-            <div><canvas id="grafico-dia"></canvas></div>
+      <section id="daily-meal">
+        <div id="add-meal">
+          <label for="meal-name">Nome da refeição:</label>
+          <input type="text" id="meal-name" class="input" />
+          <button id="add-meal-btn">Adicionar Refeição</button>
+        </div>
+        <table id="daily-meals">
+          <tbody>
+            <tr>
+              <th>Refeição</th>
+              <th>Carboidratos (g)</th>
+              <th>Proteínas (g)</th>
+              <th>Gorduras (g)</th>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <button id="add-day">Adicionar dia à semana</button>
+      <section id="daily-goal">
+        <div id="set-goal">
+          <h2>Meta Diária</h2>
+          <div>
+            <label for="carb-goal">Carboidratos (g):</label>
+            <input type="number" id="carb-goal" class="input" />
           </div>
-        </section>
-        <section>
-          <h2>Tabela de Refeições</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Refeição</th>
-                <th>Proteínas (g)</th>
-                <th>Carboidratos (g)</th>
-                <th>Gorduras (g)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Café da manhã</td>
-                <td>30</td>
-                <td>50</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Almoço</td>
-                <td>40</td>
-                <td>60</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td>Jantar</td>
-                <td>30</td>
-                <td>40</td>
-                <td>15</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </div>
+          <div>
+            <label for="prot-goal">Proteínas (g):</label>
+            <input type="number" id="prot-goal" class="input" />
+          </div>
+          <div>
+            <label for="fat-goal">Gorduras (g):</label>
+            <input type="number" id="fat-goal" class="input" />
+          </div>
+          <button id="set-goal-btn">Definir Metas</button>
+        </div>
+        <div id="daily-meals-graph"></div>
+      </section>
     </main>
     <footer>
       <p>

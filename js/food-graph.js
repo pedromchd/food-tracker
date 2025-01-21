@@ -13,7 +13,6 @@ $(function () {
 
     if (Object.keys(window.userMeal).length === 0) {
       alert("Selecione pelo menos um alimento");
-      $("#food-graph").empty();
       return;
     }
 
