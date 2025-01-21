@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/food-panel.css" />
     <link rel="stylesheet" href="css/food-graph.css" />
     <link rel="stylesheet" href="css/daily-meal.css" />
+    <link rel="stylesheet" href="css/daily-goal.css" />
     <title>Food Tracker</title>
   </head>
   <body>
@@ -27,7 +28,7 @@
       <section id="daily-meal">
         <div id="add-meal">
           <label for="meal-name">Nome da refeição:</label>
-          <input type="text" id="meal-name" placeholder="Café da manhã" />
+          <input type="text" id="meal-name" class="input" />
           <button id="add-meal-btn">Adicionar Refeição</button>
         </div>
         <table id="daily-meals">
@@ -39,31 +40,25 @@
           </tr>
         </table>
       </section>
+      <section id="daily-goal">
+        <div id="set-goal">
+          <h2>Meta Diária</h2>
+          <div>
+            <label for="carb-goal">Carboidratos (g):</label>
+            <input type="number" id="carb-goal" class="input" />
+          </div>
+          <div>
+            <label for="prot-goal">Proteínas (g):</label>
+            <input type="number" id="prot-goal" class="input" />
+          </div>
+          <div>
+            <label for="fat-goal">Gorduras (g):</label>
+            <input type="number" id="fat-goal" class="input" />
+          </div>
+          <button id="set-goal-btn">Definir Metas</button>
+        </div>
+      </section>
       <div class="container">
-        <section>
-          <h2>Definir Meta Diária</h2>
-          <form id="meta-form">
-            <label for="meta-prot">Proteínas (g):</label>
-            <input
-              type="number"
-              id="meta-prot"
-              placeholder="Ex: 200"
-              required
-            />
-            <label for="meta-carb">Carboidratos (g):</label>
-            <input
-              type="number"
-              id="meta-carb"
-              placeholder="Ex: 300"
-              required
-            />
-            <label for="meta-gord">Gorduras (g):</label>
-            <input type="number" id="meta-gord" placeholder="Ex: 70" required />
-            <br />
-            <br />
-            <button type="submit">Salvar Meta</button>
-          </form>
-        </section>
         <section>
           <h2>Gráficos de Consumo</h2>
           <div id="graficos-container">
