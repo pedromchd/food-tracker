@@ -1,0 +1,29 @@
+#daily-goal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+#set-goal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#set-goal div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#set-goal h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#set-goal h2,
+#set-goal-btn {
+  align-self: center;
+}
