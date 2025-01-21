@@ -1,4 +1,4 @@
-#food-graph:empty + #daily-meal {
+#food-graph:empty + #daily-meal:not(:has(tr + tr)) {
   display: none;
 }
 
