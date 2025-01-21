@@ -3,9 +3,9 @@ $(function () {
 
   $("#add-day").on("click", function () {
     const dayMeal = {
-      carboidratos: 1,
-      proteinas: 1,
-      gorduras: 1,
+      carboidratos: 0,
+      proteinas: 0,
+      gorduras: 0,
     };
 
     window.dailyMeals.forEach((meal) => {
@@ -19,9 +19,9 @@ $(function () {
   });
 
   window.dailyGoal = {
-    carboidratos: 0,
-    proteinas: 0,
-    gorduras: 0,
+    carboidratos: 1,
+    proteinas: 1,
+    gorduras: 1,
   };
 
   $("#set-goal-btn").on("click", function () {
