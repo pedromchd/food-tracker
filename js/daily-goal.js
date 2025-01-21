@@ -105,6 +105,24 @@ function plotWeekMeals() {
           },
         },
       },
+      scales: {
+        y: {
+          beginAtZero: false,
+          ticks: {
+            color: "#fff",
+            font: { size: 16 },
+          },
+          grid: { color: "rgba(255, 255, 255, 0.2)" },
+        },
+        x: {
+          offset: true,
+          ticks: {
+            color: "#fff",
+            font: { size: 16 },
+          },
+          grid: { color: "rgba(255, 255, 255, 0.2)" },
+        },
+      },
     },
   });
 }
