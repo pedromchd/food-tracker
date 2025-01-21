@@ -28,6 +28,17 @@ $(function () {
     dailyGoal.carboidratos = parseFloat($("#carb-goal").val());
     dailyGoal.proteinas = parseFloat($("#prot-goal").val());
     dailyGoal.gorduras = parseFloat($("#fat-goal").val());
+
+    if (
+      window.dailyGoal.carboidratos === 0 ||
+      window.dailyGoal.proteinas === 0 ||
+      window.dailyGoal.gorduras === 0
+    ) {
+      alert("A meta diária não pode ser zero!");
+      return;
+    }
+
+    plotWeekMeals();
   });
 });
 
