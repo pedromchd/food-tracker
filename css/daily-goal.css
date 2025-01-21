@@ -1,0 +1,45 @@
+#daily-meal:not(:has(tr + tr))
+  ~ :where(#add-day, #daily-goal:has(#daily-meals-graph:empty)) {
+  display: none;
+}
+
+#add-day {
+  margin: auto;
+}
+
+#daily-goal {
+  height: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+#set-goal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#set-goal div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#set-goal h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#set-goal h2,
+#set-goal-btn {
+  margin: auto;
+}
+
+#daily-meals-graph {
+  width: 85%;
+  height: 100%;
+  position: relative;
+}
