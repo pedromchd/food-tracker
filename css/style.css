@@ -39,6 +39,23 @@ footer {
   padding: 0.5rem;
 }
 
+label:has(+ .input) {
+  color: #fff;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ecec12;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
 button {
   width: 15rem;
   padding: 0.5rem;
