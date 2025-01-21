@@ -1,0 +1,63 @@
+#food-graph:empty + #daily-meal:not(:has(tr + tr)) {
+  display: none;
+}
+
+#daily-meal {
+  min-height: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 1rem;
+}
+
+#add-meal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label:has(+ #meal-name) {
+  color: #fff;
+  font-weight: bold;
+}
+
+#meal-name {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ecec12;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+#meal-name::placeholder {
+  color: #999;
+}
+
+#daily-meals {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #333;
+}
+
+#daily-meals th {
+  padding: 0.5rem;
+  color: #333;
+  background-color: #ecec12;
+  border: 1px solid #333;
+  font-weight: bold;
+}
+
+#daily-meals td {
+  padding: 0.5rem;
+  border: 1px solid #333;
+}
+
+#daily-meals tr {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+#daily-meals tr:nth-of-type(odd) {
+  background-color: #f3f385;
+}
