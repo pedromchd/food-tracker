@@ -15,6 +15,8 @@ $(function () {
     });
 
     window.weekMeals.push(dayMeal);
+
+    plotWeekMeals();
     clearDayMeals();
   });
 
@@ -54,4 +56,66 @@ function clearDayMeals() {
   `);
 }
 
-function plotDailyMeals() {}
+function plotWeekMeals() {
+  $("#daily-meals-graph").html("<canvas id='daily-meals-chart'></canvas>");
+
+  const percents = calcPercents(window.dailyGoal, window.weekMeals);
+
+  new Chart($("#daily-meals-chart"), {
+    type: "line",
+    data: {
+      labels: percents.dias,
+      datasets: [
+        {
+          label: "Carboidratos",
+          data: percents.carboidratos,
+          borderColor: "#ff924c",
+          backgroundColor: "#ff924c",
+          fill: false,
+        },
+        {
+          label: "Proteínas",
+          data: percents.proteinas,
+          borderColor: "#80b918",
+          backgroundColor: "#80b918",
+          fill: false,
+        },
+        {
+          label: "Gorduras",
+          data: percents.gorduras,
+          borderColor: "#ff5c8a",
+          backgroundColor: "#ff5c8a",
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        title: {
+          display: true,
+          text: "Meta diária em %",
+          color: "#fff",
+          font: { size: 16 },
+        },
+        legend: {
+          labels: {
+            color: "#fff",
+            font: { size: 16 },
+          },
+        },
+      },
+    },
+  });
+}
+
+function calcPercents(goal, meals) {
+  return {
+    dias: meals.map((meal, index) => `Dia ${index + 1}`),
+    carboidratos: meals.map(
+      (meal) => (meal.carboidratos / goal.carboidratos) * 100
+    ),
+    proteinas: meals.map((meal) => (meal.proteinas / goal.proteinas) * 100),
+    gorduras: meals.map((meal) => (meal.gorduras / goal.gorduras) * 100),
+  };
+}
