@@ -1,4 +1,13 @@
+#daily-meal:not(:has(tr + tr)) ~ :where(#add-day, #daily-goal) {
+  display: none;
+}
+
+#add-day {
+  margin: auto;
+}
+
 #daily-goal {
+  height: 25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -25,5 +34,5 @@
 
 #set-goal h2,
 #set-goal-btn {
-  align-self: center;
+  margin: auto;
 }
